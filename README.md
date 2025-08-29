@@ -27,82 +27,103 @@ This API is built with **Django REST Framework (DRF)** and is useful for develop
 
 2. **Create & activate a virtual environment**
 python -m venv venv
+```bash
 source venv/bin/activate   # On Linux/Mac
 venv\Scripts\activate      # On Windows
+```
 
-3. **Install dependencies**
+4. **Install dependencies**
+```bash
 pip install -r requirements.txt
+```
 
-4. **Run database migrations**
+6. **Run database migrations**
+```bash
 python manage.py migrate
+```
 
 # Usage / Running the API
 
-1. Start the Django development server
--From the project root where manage.py is located, run:
+- Start the Django development server
+- From the project root where manage.py is located, run:
+```bash
 python manage.py runserver
+```
+- The server will start at:
 
--The server will start at:
-
+```
 http://127.0.0.1:8000/
+```
 
 # Loading Data
 
 1. Make sure your JSON file (data.json) is in the project root.
 
 2. Run the Django management command to load the data:
+```bash
 python manage.py loaddata data.json
+```
 
 # 🔗 API Endpoints
 
 1. List all provinces
-GET  http://127.0.0.1:8000/provinces/
-Example curl:
-curl -s http://127.0.0.1:8000/provinces/ | jq
-
+```
+http://127.0.0.1:8000/provinces/
+```
 2. Retrieve one province by ID (replace <id>)
-GET  http://127.0.0.1:8000/provinces/<id>/
-Example curl (province id = 1):
-curl -s http://127.0.0.1:8000/provinces/1/ | jq
-
+```
+http://127.0.0.1:8000/provinces/<id>/
+Example (province id = 1):
+http://127.0.0.1:8000/provinces/1/ 
+```
 3. List all districts
-GET  http://127.0.0.1:8000/districts/
+```
+http://127.0.0.1:8000/districts/
 Example curl:
-curl -s http://127.0.0.1:8000/districts/ | jq
-
+http://127.0.0.1:8000/districts/
+```
 4. List districts for a given province (by province id)
-GET  http://127.0.0.1:8000/districts/<province_id>/
-Example curl (province id = 1):
-curl -s http://127.0.0.1:8000/districts/1/ | jq
-
+```
+http://127.0.0.1:8000/districts/<province_id>/
+Example  (province id = 1):
+http://127.0.0.1:8000/districts/1/ 
+```
 5. Retrieve a single district by ID
-GET  http://127.0.0.1:8000/districts/<id>/
+```
+http://127.0.0.1:8000/districts/<id>/
 Example:
-curl -s http://127.0.0.1:8000/districts/10/ | jq
-
+http://127.0.0.1:8000/districts/10/
+```
 6. List sectors (all)
-GET  http://127.0.0.1:8000/sectors/
-curl -s http://127.0.0.1:8000/sectors/ | jq
-
+```
+http://127.0.0.1:8000/sectors/
+Example:
+http://127.0.0.1:8000/sectors/
+```
 7. List sectors for a district (by district id)
-GET  http://127.0.0.1:8000/sectors/<district_id>/
+```
+http://127.0.0.1:8000/sectors/<district_id>/
 .Example:
-curl -s http://127.0.0.1:8000/sectors/10/ | jq
-
+http://127.0.0.1:8000/sectors/10/
+```
 8. List cells for a sector (by sector id)
-GET  http://127.0.0.1:8000/cells/<sector_id>/
+```
+http://127.0.0.1:8000/cells/<sector_id>/
 Example:
-curl -s http://127.0.0.1:8000/cells/25/ | jq
-
+http://127.0.0.1:8000/cells/25/
+```
 9. List villages for a cell (by cell id)
-GET  http://127.0.0.1:8000/villages/<cell_id>/
+```
+http://127.0.0.1:8000/villages/<cell_id>/
 Example:
-curl -s http://127.0.0.1:8000/villages/60/ | jq
-
+http://127.0.0.1:8000/villages/60/
+```
 10. Retrieve a single village by ID
-GET  http://127.0.0.1:8000/villages/<id>/
+```
+http://127.0.0.1:8000/villages/<id>/
 Example:
-curl -s http://127.0.0.1:8000/villages/200/ | jq
+http://127.0.0.1:8000/villages/200/
+```
 
 # Contributing
 
