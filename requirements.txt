@@ -1,0 +1,8 @@
+# === Rwanda Locations API dependencies ===
+
+Django==5.2.5
+djangorestframework==3.16.1
+
+# Optional: Helpful for development/admin tasks
+django-extensions==4.1
+  
