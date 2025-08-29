@@ -1,34 +1,45 @@
 # Rwanda-locations-api
-A Django REST API that provides hierarchical Rwandan location data ( from provinces down to villages 
 
-# Description
- 
+_A Django REST API that provides hierarchical Rwandan location data (from provinces down to villages)._
+
+---
+
+## **Description**
+
 The Rwanda Locations API provides hierarchical location data for Rwanda, including:
-- Provinces
-- Districts
-- Sectors
-- Cells
+
+- Provinces  
+- Districts  
+- Sectors  
+- Cells  
 - Villages  
-This API is built with Django REST Framework (DRF) and is useful for developers who need accurate administrative location data for applications such as e-government systems, logistics, school management, and census projects.
 
-# Installation / Setup
+This API is built with **Django REST Framework (DRF)** and is useful for developers who need accurate administrative location data for applications such as e-government systems, logistics, school management, and census projects.
 
-1. Clone the repository
-git clone https://github.com/DamourDev/Rwanda-locations-api.git
-cd Rwanda-locations-api
-2. Create & activate a virtual environment
+---
+
+## **Installation / Setup**
+
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/DamourDev/Rwanda-locations-api.git
+   cd Rwanda-locations-api
+
+2. **Create & activate a virtual environment**
 python -m venv venv
-source venv/bin/activate     # On Linux/Mac
-venv\Scripts\activate        # On Windows
-3. Install dependencies
+source venv/bin/activate   # On Linux/Mac
+venv\Scripts\activate      # On Windows
+
+3. **Install dependencies**
 pip install -r requirements.txt
-4. Run database migrations
+
+4. **Run database migrations**
 python manage.py migrate
 
 # Usage / Running the API
 
 To start the Django development server, run:
--python manage.py runserver
+python manage.py runserver
 Then visit:
 •	API Root: http://127.0.0.1:8000/
 •	Example Endpoint: http://127.0.0.1:8000/provinces/
@@ -42,17 +53,17 @@ python manage.py loaddata data.json
 # 🔗 API Endpoints
 
 Here are the main endpoints exposed by the API:
-•	Provinces
+-	Provinces
 GET /provinces/ – List all provinces
 GET /provinces/id/ – Retrieve a specific province
-•	Districts
+- Districts
 GET /districts/ – List all districts
 GET /districts/id/ – Retrieve a specific district
-•	Sectors
+-	Sectors
 GET /sectors/ – List all sectors
-•	Cells
+-	Cells
 GET /cells/ – List all cells
-•	Villages
+-	Villages
 GET /villages/ – List all villages
 
 # Contributing
