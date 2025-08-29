@@ -28,7 +28,7 @@ python manage.py migrate
 # Usage / Running the API
 
 To start the Django development server, run:
-python manage.py runserver
+-python manage.py runserver
 Then visit:
 •	API Root: http://127.0.0.1:8000/
 •	Example Endpoint: http://127.0.0.1:8000/provinces/
@@ -66,11 +66,12 @@ To contribute:
 5.	Open a Pull Request
 
 # 👨‍💻 Author
+
 NKURUNZIZA Jean D’Amour
-•	🎓 University of Rwanda – IT Student
-•	📧 Email: nkurunzizajeandamour20@gmail.com
-•	📱 Phone: +250 791 261 144
-•	🌍 Kigali, Rwanda
-•	💼 GitHub: DamourDev
+-	🎓 University of Rwanda – IT Student
+-	📧 Email: nkurunzizajeandamour20@gmail.com
+-	📱 Phone: +250 791 261 144
+-	🌍 Kigali, Rwanda
+-	💼 GitHub: DamourDev
 
 
