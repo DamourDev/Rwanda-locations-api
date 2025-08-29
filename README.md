@@ -38,69 +38,70 @@ python manage.py migrate
 
 # Usage / Running the API
 
-# 1) Start the Django development server
-# From the project root where manage.py is located:
+1. Start the Django development server
+-From the project root where manage.py is located, run:
 python manage.py runserver
 
-# The server will start at:
+-The server will start at:
+
 http://127.0.0.1:8000/
 
 # Loading Data
 
-# 1) Make sure your JSON file (data.json) is in the project root.
+1. Make sure your JSON file (data.json) is in the project root.
 
-# 2) Run the Django management command to load the data:
+2. Run the Django management command to load the data:
 python manage.py loaddata data.json
 
 # 🔗 API Endpoints
 
-# 1) List all provinces
+1. List all provinces
 GET  http://127.0.0.1:8000/provinces/
-# Example curl:
+Example curl:
 curl -s http://127.0.0.1:8000/provinces/ | jq
 
-# 2) Retrieve one province by ID (replace <id>)
+2. Retrieve one province by ID (replace <id>)
 GET  http://127.0.0.1:8000/provinces/<id>/
-# Example curl (province id = 1):
+Example curl (province id = 1):
 curl -s http://127.0.0.1:8000/provinces/1/ | jq
 
-# 3) List all districts
+3. List all districts
 GET  http://127.0.0.1:8000/districts/
-# Example curl:
+Example curl:
 curl -s http://127.0.0.1:8000/districts/ | jq
 
-# 4) List districts for a given province (by province id)
+4. List districts for a given province (by province id)
 GET  http://127.0.0.1:8000/districts/<province_id>/
-# Example curl (province id = 1):
+Example curl (province id = 1):
 curl -s http://127.0.0.1:8000/districts/1/ | jq
 
-# 5) Retrieve a single district by ID
+5. Retrieve a single district by ID
 GET  http://127.0.0.1:8000/districts/<id>/
-# Example:
+Example:
 curl -s http://127.0.0.1:8000/districts/10/ | jq
 
-# 6) List sectors (all)
+6. List sectors (all)
 GET  http://127.0.0.1:8000/sectors/
 curl -s http://127.0.0.1:8000/sectors/ | jq
 
-# 7) List sectors for a district (by district id)
+7. List sectors for a district (by district id)
 GET  http://127.0.0.1:8000/sectors/<district_id>/
-# Example:
+.Example:
 curl -s http://127.0.0.1:8000/sectors/10/ | jq
 
-# 8) List cells for a sector (by sector id)
+8. List cells for a sector (by sector id)
 GET  http://127.0.0.1:8000/cells/<sector_id>/
-# Example:
+Example:
 curl -s http://127.0.0.1:8000/cells/25/ | jq
 
-# 9) List villages for a cell (by cell id)
+9. List villages for a cell (by cell id)
 GET  http://127.0.0.1:8000/villages/<cell_id>/
-# Example:
+Example:
 curl -s http://127.0.0.1:8000/villages/60/ | jq
 
-# 10) Retrieve a single village by ID
+10. Retrieve a single village by ID
 GET  http://127.0.0.1:8000/villages/<id>/
-# Example:
+Example:
 curl -s http://127.0.0.1:8000/villages/200/ | jq
 
 # Contributing
