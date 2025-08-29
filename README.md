@@ -1,10 +1,7 @@
 # Rwanda-locations-api
 A Django REST API that provides hierarchical Rwandan location data ( from provinces down to villages 
 
-Rwanda Locations API
-Simple location API for Rwanda built with Django REST Framework.
-
- Description
+# Description
  
 The Rwanda Locations API provides hierarchical location data for Rwanda, including:
 - Provinces
@@ -14,7 +11,7 @@ The Rwanda Locations API provides hierarchical location data for Rwanda, includi
 - Villages  
 This API is built with Django REST Framework (DRF) and is useful for developers who need accurate administrative location data for applications such as e-government systems, logistics, school management, and census projects.
 
-Installation / Setup
+# Installation / Setup
 
 1. Clone the repository
 git clone https://github.com/DamourDev/Rwanda-locations-api.git
@@ -28,21 +25,21 @@ pip install -r requirements.txt
 4. Run database migrations
 python manage.py migrate
 
-Usage / Running the API
+# Usage / Running the API
 
 To start the Django development server, run:
 python manage.py runserver
 Then visit:
 •	API Root: http://127.0.0.1:8000/
 •	Example Endpoint: http://127.0.0.1:8000/provinces/
-________________________________________
-📥 Loading Data
+
+# Loading Data
 
 The location data is provided in data.json.
 To load it into your database, run:
 python manage.py loaddata data.json
-________________________________________
-🔗 API Endpoints
+
+# 🔗 API Endpoints
 
 Here are the main endpoints exposed by the API:
 •	Provinces
@@ -58,7 +55,7 @@ GET /cells/ – List all cells
 •	Villages
 GET /villages/ – List all villages
 
-Contribution
+# Contributing
 
 Contributions are welcome!
 To contribute:
@@ -67,8 +64,8 @@ To contribute:
 3.	Commit changes (git commit -m "Add new feature")
 4.	Push to branch (git push origin feature-name)
 5.	Open a Pull Request
-________________________________________
-👨‍💻 Author
+
+# 👨‍💻 Author
 NKURUNZIZA Jean D’Amour
 •	🎓 University of Rwanda – IT Student
 •	📧 Email: nkurunzizajeandamour20@gmail.com
